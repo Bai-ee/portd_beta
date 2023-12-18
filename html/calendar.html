@@ -1,0 +1,54 @@
+<div style="display: none">
+  <link rel="stylesheet" href="../css/calendar.css" />
+</div>
+
+<div class="calendar-white-paper-container">
+  <!-- Container to show Meetings -->
+  <div
+    class="display-flex flex-col w-100 align-center"
+    id="meetings-div"
+    style="display: none; gap: 3px;"
+  ></div>
+
+  <!-- Container to show loading spinnder -->
+  <div
+    class="display-flex flex-col w-100 align-center justify-center"
+    id="loader-div"
+    style="height: 100%"
+  >
+    <div class="loader"></div>
+  </div>
+
+  <!-- Container to show if there are no meetings -->
+  <div
+    class="display-flex flex-1 flex-col w-100 justify-center mt-3"
+    style="display: none"
+    id="no-meetings-div"
+  >
+    <!-- <h4 class="no_meeting_title">No meetings scheduled.</h4> -->
+
+    <button id="video_call_new_meetings_card"
+    style="height:80px !important; gap:5px;"
+    class="calendar_new_meetings_card display-flex">
+      
+      <!-- <img src="../assets/calendar_white.png" class="meetings_nav_icon" /> -->
+      <span style="pointer-events:none;" class="material-symbols-outlined">
+        calendar_add_on
+      </span>
+      
+
+      <p id="newMeetingCal" class="mt-1">new meeting</p>
+    </button>
+
+    <img src="../assets/empty_div.png" class="calendar_empty_div" />
+    <img src="../assets/empty_div.png" class="calendar_empty_div" />
+    <img src="../assets/empty_div.png" class="calendar_empty_div" />
+
+    <div class="settings-footer" style="display: none">
+      <span class="refresh-timer-footer"
+        >Refresh in :<span id="base-timer-label">00</span
+        ><img src="../icons/refresh.png"
+      /></span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,126 @@
+.login-white-paper-container {
+  width: 100%;
+  height: auto;
+  padding: 0rem;
+  position: relative;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 10px;
+}
+
+.adminButton {
+  /* color:red; */
+  width: 100% !important;
+  margin: 0px !important;
+  min-height:60px !important;
+  max-height:none !important;
+}
+
+#adminContainer {
+  width:100%;
+  height:300px;
+  /* background-color:red; */
+  display:none;
+  flex: 1;
+}
+#goBackAdmin {
+  border: 1px solid var(--primary) !important;
+  color:var(--primary)
+}
+
+
+#adminContent{
+
+}
+
+
+#copy-admin-permission-request-note {
+color:white;
+background:var(--primary)
+
+}
+#copy-admin-permission-request-note:hover {
+  box-shadow: 0px 10px 10px rgba(1, 0, 60, 0.25);
+  transition: 0.2s ease-in;
+
+}
+
+.login-white-paper-containerStack {
+  width: 100%;
+  height: auto;
+  padding: 0rem;
+  position: relative;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  padding: 0rem;
+  position: relative;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.welcome-img-container {
+  width: 100%;
+  height: 150px;
+  border-radius: var(--border-radius);
+  background-color: white;
+  margin-bottom: 10px;
+}
+.btn-block {
+  border-radius: var(--border-radius);
+  background-color: white;
+  cursor: pointer;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  font-family: "GELLIX-REGULAR", sans-serif;
+  font-size: 12px;
+  color: #6a6c83;
+  outline: none;
+  font-weight: lighter;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ededed;
+  /* margin: 5px; */
+  /* height: 54px; */
+  /* new ones */
+  flex: 1;
+  /* max-height: 50px; */
+  margin-bottom: 2px;
+  height: 60px !important;
+  width: 60px !important;
+}
+
+.btn-block:active {
+  background-color: var(--primary-light);
+}
+
+.btn-icon {
+  height: 25px !important;
+  width: 25px !important;
+}
+
+.select-calendar-text {
+  margin-top: 35px;
+  font-size: 14px;
+}
+
+/* .calendar_add_on {
+  color:var(--primary) !important;
+} */

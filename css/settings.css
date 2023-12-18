@@ -1,0 +1,220 @@
+.setttings-white-paper-container {
+  width: 100%;
+  height: auto;
+  /* min-height: 350px; */
+  /* padding: 2rem; */
+  position: relative;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  /* background-color: white; */
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0px;
+}
+
+.settings-collapsible {
+  min-height: 54px;
+  left: 0px;
+  top: 0px;
+  border-radius: var(--border-radius);
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  width: 95%;
+  outline: none;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #6a6c83;
+  user-select: none;
+  border: 0px;
+  font-size: 12px;
+  color: #6a6c83;
+  outline: none;
+  font-weight: lighter;
+  padding: 0px !important;
+  border: 2px solid #ededed;
+}
+
+.collapsible:nth-of-type(1) {
+  border-top: 1px solid #e6e7e9;
+}
+
+.collapsible-body {
+  transition: all 235ms ease-in-out 0s;
+  background-color: rgba(204, 204, 204, 0.03);
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  /* overflow: hidden; */
+  padding: 0 0.75rem;
+  width: 100%;
+}
+
+.collapsible input:checked + label {
+  color: var(--common-color);
+}
+
+.collapsible input[id^="collapsible"]:checked ~ div.collapsible-body {
+  margin: 0;
+  max-height: 960px;
+  opacity: 1;
+  /* padding: 0.75rem; */
+}
+
+.collapsible input[id^="collapsible"]:checked ~ label {
+  padding: 0.75rem;
+}
+
+.collapsible label {
+  color: var(--common-color);
+  display: inline-block;
+  /* font-weight: 600; */
+  margin: 0 0-1px;
+  text-align: center;
+  padding-bottom: 0px;
+}
+
+.collapsible label:hover,
+.tabs label:hover {
+  color: #868e96;
+  cursor: pointer;
+}
+
+.collapsible input[id^="collapsible"]:checked {
+  -webkit-transform: rotate(-45deg) translate(-9px, 7px);
+  transform: rotate(-45deg) translate(-9px, 7px);
+}
+
+.collapsible input[id^="collapsible"]:checked {
+  opacity: 0;
+}
+
+.collapsible input[id^="collapsible"]:checked {
+  -webkit-transform: rotate(45deg) translate(-8px, -9px);
+  transform: rotate(45deg) translate(-8px, -9px);
+}
+
+.settings-button-text {
+  /* cursor: pointer;
+  color: #fff !important;
+  font-size: 0.8rem !important;
+  font-weight: 400 !important;
+  font-family: 'GELLIX-REGULAR', sans-serif;
+  text-decoration: none; */
+  color: #6a6c83;
+  user-select: none;
+  /* width: 77%; */
+  border: 0px;
+  font-family: "GELLIX-REGULAR", sans-serif;
+  font-size: 12px;
+  color: #6a6c83;
+  background-color: transparent;
+  outline: none;
+  /* font-weight: lighter; */
+}
+
+.settings-button {
+  min-height: 54px;
+  left: 0px;
+  top: 0px;
+  border-radius: var(--border-radius);
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  width: 95%;
+  outline: none;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #6a6c83;
+  user-select: none;
+  border: 0px;
+  font-size: 12px;
+  color: #6a6c83;
+  outline: none;
+  font-weight: lighter;
+  padding: 0px !important;
+}
+
+.settings-button:hover {
+  box-shadow: none;
+  box-shadow: 0px 10px 10px rgba(1, 0, 60, 0.25);
+  /* border: 2px solid var(--secondary); */
+  /* background-color:#; */
+  transition: 0.2s ease-in;
+}
+
+.account-list-container {
+}
+
+.sign-out-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  /* bottom: 15px; */
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.linked-account-email {
+  color: black;
+}
+
+.account-container {
+  border: 1px solid #ededed;
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.close-button {
+  height: 15px !important;
+  width: 15px !important;
+}
+
+.settings-btn-block {
+  border-radius: var(--border-radius);
+  background-color: white;
+  cursor: pointer;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  font-family: "GELLIX-REGULAR", sans-serif;
+  font-size: 12px;
+  color: #6a6c83;
+  outline: none;
+  font-weight: lighter;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #ededed;
+  margin: 5px;
+  height: 54px;
+  max-height: 54px;
+}
+.settings-btn-block:hover {
+  box-shadow: none;
+  box-shadow: 0px 10px 10px rgba(1, 0, 60, 0.25);
+  /* border: 2px solid var(--secondary); */
+  /* background-color:#; */
+  transition: 0.2s ease-in;
+}
+
+.delete_id_button {
+  padding: 0 !important;
+}
+
+.linked-account-email {
+  color: #6a6c83;
+}

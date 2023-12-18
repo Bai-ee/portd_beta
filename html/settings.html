@@ -1,0 +1,218 @@
+<div style="display: none">
+  <link rel="stylesheet" href="../css/settings.css" />
+</div>
+
+<div class="setttings-white-paper-container">
+  <div class="display-flex flex-col justify-center align-center w-100">
+    <!-- Link new account -->
+    <!-- <div class="settings-button" id="go_to_login">
+      <a class="settings-button-text">Link new account</a>
+    </div> -->
+
+    <!-- link accounts -->
+    <div
+      class="noHover collapsible settings-collapsible"
+      id="create_connection_collapsible"
+    >
+      <input
+        id="collapsible1"
+        type="checkbox"
+        name="collapsible"
+        style="display: none"
+        checked
+      />
+      <label class="settings-button-text w-100" for="collapsible1"
+        >Create Connection</label
+      >
+      <div class="collapsible-body">
+        <div
+          class="noHover display-flex flex-col flex-1 align-center justify-center p-2"
+        >
+          <button id="google-calendar-btn" class="settings-btn-block mt-3" s>
+            <div class="display-flex justify-center align-center w-20">
+              <img
+                src="../icons/google.png"
+                alt="Google Calendar"
+                class="btn-icon"
+              />
+            </div>
+            <div class="display-flex justify-center align-center w-60">
+              <span class="ml-2">Sign in with Google</span>
+            </div>
+            <div class="display-flex justify-center align-center w-20"></div>
+          </button>
+
+          <button id="microsoft-calendar-btn" class="settings-btn-block mt-3">
+            <div class="display-flex justify-center align-center w-20">
+              <img
+                src="../icons/microsoft.png"
+                alt="Microsoft Calendar"
+                class="btn-icon"
+              />
+            </div>
+            <div class="display-flex justify-center align-center w-60">
+              <span class="ml-2">Sign in with Outlook</span>
+            </div>
+            <div class="display-flex justify-center align-center w-20"></div>
+          </button>
+
+          <button id="calendly-calendar-btn" class="settings-btn-block mt-3">
+            <div class="display-flex justify-center align-center w-20">
+              <img
+                src="../icons/calendly.png"
+                alt="Calendly Calendar"
+                class="btn-icon"
+              />
+            </div>
+            <div class="display-flex justify-center align-center w-60">
+              <span class="ml-2">Sign in with Calendly</span>
+            </div>
+            <div class="display-flex justify-center align-center w-20"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Remove accounts -->
+    <div class="noHover collapsible settings-collapsible">
+      <input
+        id="collapsible2"
+        type="checkbox"
+        name="collapsible"
+        style="display: none"
+        checked
+      />
+      <label
+        class="settings-button-text w-100 font-weight-bold"
+        for="collapsible2"
+        >Remove Connection</label
+      >
+      <div class="collapsible-body">
+        <div
+          id="account-list-container"
+          class="display-flex flex-col flex-1 align-center justify-center p-2"
+        >
+          <div class="account-item">
+            <h4 class="settings-button-text">No accounts linked.</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backup notes -->
+    <div class="settings-button" id="import_notes">
+      <input
+        id="import_notes_input"
+        type="file"
+        accept="application/json"
+        name="collapsible"
+        style="display: none"
+      />
+      <div class="display-flex flex-row align-center justify-center w-100">
+        <img
+          src="../assets/import.png"
+          class="mr-2"
+          style="height: 15px !important; width: 12px !important"
+        />
+        <a class="settings-button-text">Import Notes</a>
+      </div>
+    </div>
+
+    <!-- Export JSON -->
+    <!-- <div class="settings-button" id="export_notes">
+      <div class="display-flex flex-row align-center justify-center w-100">
+        <img
+          src="../assets/export.png"
+          class="mr-2"
+          style="height: 15px !important; width: 12px !important"
+        />
+        <a class="settings-button-text">Export Notes</a>
+      </div>
+    </div> -->
+
+    <!-- Sign out -->
+    <!-- <div class="settings-button" id="signout">
+      <a
+        class="display-flex flex-row justify-center align-center w-100 settings-button-text"
+        >Sign Out
+      </a>
+    </div> -->
+
+    <div class="noHover collapsible settings-collapsible">
+      <input
+        id="collapsible3"
+        type="checkbox"
+        name="collapsible"
+        style="display: none"
+        checked
+      />
+
+      <!-- <div class="display-flex flex-row align-center justify-center w-100"> -->
+      <label
+        class="settings-button-text w-100 flex-row justify-center align-center"
+        for="collapsible3"
+        style="display: flex"
+      >
+        <img
+          src="../assets/delete.png"
+          class=""
+          style="height: 12px !important; width: 22px !important"
+        />
+        <p
+          class="delete"
+          style='
+            color: #6a6c83;
+            user-select: none;
+            /* width: 77%; */
+            border: 0px;
+            font-size: 12px;
+            color: #6a6c83;
+            background-color: transparent;
+            outline: none;
+            font-weight: lighter;
+            font-family: "GELLIX-REGULAR", sans-serif;
+          '
+        >
+          Delete Profile
+        </p>
+      </label>
+      <!-- </div> -->
+      <div class="collapsible-body">
+        <p style='text-align: center; margin-top: 3px; font-family: "GELLIX-REGULAR", sans-serif;'>
+          Export your notes before deleting your profile
+        </p>
+
+        <div class="p-2">
+          <div
+            class="settings-button mt-4"
+            id="export_notes"
+            style="border: 2px solid #ededed"
+          >
+            <div
+              class="display-flex flex-row align-center justify-center w-100"
+            >
+              <img
+                src="../assets/export.png"
+                class="mr-2"
+                style="height: 15px !important; width: 12px !important"
+              />
+              <a class="settings-button-text">Export Notes</a>
+            </div>
+          </div>
+
+          <div
+            class="settings-button"
+            id="signout"
+            style="background-color: #fae0e0"
+          >
+            <div
+              class="display-flex flex-row align-center justify-center w-100"
+            >
+              <a class="settings-button-text">Delete Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

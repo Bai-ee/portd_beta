@@ -1,0 +1,398 @@
+<div>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="../fonts/GELLIX-REGULAR.TTF" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+  />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,400,0,0" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+    href="../css/myStyles.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+    href="../css/notes.css"
+  />
+  <link rel="stylesheet" href="../scripts/quill/quill.snow.css" />
+  <script type="text/javascript" src="../scripts/quill/quill.js"></script>
+  <script src="../scripts/image-resize.min.js"></script>
+</div>
+
+<div class="main_container" id="main_container">
+  <div class="box" id="default" style="z-index: 0">
+    <div class="section_vert">
+      <!-- Div to contain dates section -->
+      <div class="display-flex flex-row justify-start align-center w-100">
+        <div class="date_change_container">
+          <div id="dateIncrementL">
+            <span
+              class="material-symbols-outlined cursor-pointer select-none adjust_arrows"
+              id="arrow_back_ios"
+              style="font-size: 18px;"
+            >
+              arrow_back_ios
+            </span>
+          </div>
+          <div id="dateIncrementR">
+            <span
+              class="material-symbols-outlined cursor-pointer select-none"
+              id="arrow_forward_ios"
+              style="font-size: 18px;"
+            >
+              arrow_forward_ios
+            </span>
+          </div>
+
+          <h2 id="current_date_number" class="date_number">23</h2>
+        </div>
+
+        <div
+          class="display-flex flex-col justify-start align-start"
+          style="width: 350px; margin-left: 0px; margin-right: 0px"
+        >
+          <h5 id="current_duration" class="duration_text day">Today</h5>
+          <!-- <h5 id="current_day" class="text_date day">Tuesday</h5> -->
+          <!-- <h5 id="current_month_year" class="text_date year">December '23</h5> -->
+          <h5 id="current_day_month_year" class="text_date"
+          style="text-align:left;
+          width:155px">
+            Tuesday, December 2023
+          </h5>
+        </div>
+
+        <div class="date-reset-container">
+          <!-- <img
+            id="reset-date"
+            src="../assets/reset_date.png"
+            
+          /> -->
+          <!-- <span class="material-symbols-outlined" > today </span> -->
+          <span
+            class="material-symbols-outlined cursor-pointer"
+            style="font-size: 24px !important"
+            id="reset-date"
+          >
+            history
+          </span>
+        </div>
+      </div>
+
+      <!-- Top Navigation Section -->
+      <div class="display-flex flex-row justify-around align-center w-100 mt-2">
+
+        <!-- //welcome screen -->
+        <div id="welcomeScreen"
+        style="width:100%;
+        height:50px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        display:block;
+        padding-top:0px;
+">
+            <div class="display-flex flex-col align-center" style="width: 100%; margin-left: 0px; margin-right: 0px">
+              <!-- <h5 id="current_duration" style="color:white;   padding-top: 11px;"
+              class="duration_text day">WELCOME TO PORTD</h5> -->
+              <img style="  margin-top: 12px; width: 60px;"
+              src="../assets/portd_text_logo.png"
+            />
+          </div>
+      </div>
+        
+        <!-- //home nav -->
+        <button id="video_call" class="meeting_hover nav_button">
+          <div
+            id="meetings-count"
+            class="meetings-count"
+            style=""
+          >
+            0
+          </div>
+
+          <span id="calendar_add_on"
+          class="material-symbols-outlined
+          no_hover_color">
+            calendar_add_on
+          </span>
+
+          <span id="calendar_add_off"
+          style="display:none"
+          class="material-symbols-outlined
+          no_hover_color">
+            home
+          </span>
+
+          
+
+          <p class="mt-1" id="meeting-btn-text">meeting</p>
+        </button>
+
+        <!-- //create note nav -->
+        <button id="add_notes"
+        class="nav_button">
+
+
+          <span class="material-symbols-outlined
+          no_hover_color">
+            add_notes
+          </span>
+          
+          <p class="mt-1">notes</p>
+        </button>
+
+        <!-- // settings nav -->
+        <button id="settings"
+        class="nav_button">
+          <span class="material-symbols-outlined
+          no_hover_color">
+            tune
+            </span>
+          <p class="mt-1">settings</p>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Div to show meetings list -->
+    <div class=" collapsible collapsibleMeetings" style="flex: 1">
+      <div class="collapsible-header collapsibleMeetingsHeader" id="meetings-collapsible-header">
+        <p class="collapsible-title" id="meetings-collapsible-title" style=" font-weight: bold;">
+          meetings
+        </p>
+        <!-- <span class="material-symbols-outlined close-icon">
+          expand_circle_down
+        </span> -->
+        <!-- <span 
+        id="collapsible-header-close-icon" class="material-symbols-rounded expand_all meetings_nav_icon">
+          expand_all
+          </span> -->
+        <img
+          src="../assets/expand_all_FILL0_wght400_GRAD0_opsz48.png"
+          class="meetings_nav_icon"
+          id="collapsible-header-close-icon"
+        />
+      </div>
+      <div
+        class="collapsible-content half-open"
+        style="height: 100%; display: flex"
+      >
+        <!-- Div to login card items -->
+        <div id="section_vert_login" style="display: flex; flex-direction: column; padding-bottom: 16px;">
+        
+        </div>
+
+        <div id="section_vert_meetings" style="display: none"></div>
+        <!-- Div to show create events accounts list -->
+        <div id="section_vert_create_events" style="display: none"></div>
+      </div>
+    </div>
+
+    <!-- Notes List -->
+    <div class="collapsible collapsibleNotes" style="flex: 1">
+      <div class="collapsible-header collapsibleNotesHeader" style="padding-bottom:0 !important;" id="notes-collapsible-header">
+        <p style="font-weight: bold; padding-bottom: 11px !important;"
+        class="collapsible-title">notes</p>
+
+        <div
+          class="display-flex flex-row justify-center align-center"
+          style="pointer-events: none; padding-bottom: 9px !important;"
+        >
+          <img
+            src="../assets/open_in_full.png"
+            style="
+              height: 15px !important;
+              width: 15px !important;
+              margin-right: 2px;
+              cursor: pointer;
+              user-select: none;
+              pointer-events: all;
+              margin-right: 10px;
+              opacity:0.9;
+            "
+            id="expand-notes"
+          />
+
+          <!-- <span 
+          id="collapsible-header-close-icon" class="material-symbols-rounded expand_all meetings_nav_icon">
+            expand_all
+            </span> -->
+          <img
+            src="../assets/expand_all_FILL0_wght400_GRAD0_opsz48.png"
+            class="meetings_nav_icon"
+            id="collapsible-header-close-icon"
+          />
+        </div>
+      </div>
+      <div
+        class="collapsible-content half-open"
+        style="height: 100%; display: flex"
+      >
+        <div
+          class="display-flex flex-col"
+          style="
+            overflow-y: hidden;
+            height: 95%;
+            overflow-x: hidden;
+            padding-right: 2px;
+            margin-right: 0px;
+            width: 100%;
+            flex: 1;
+          "
+        >
+          <div
+            id="note-typing-container-default"
+            class="note-typing-container display-flex"
+            style="height: 66px; min-height: 66px; max-height: 66px"
+          >
+            <div
+              id="note-typing-description-default"
+              class="note-typing-description-default"
+              contenteditable="true"
+              style="height: 76px; min-height: 76px; max-height: 76px"
+            ></div>
+          </div>
+
+          <div id="previous-notes"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notes Sections -->
+  <div class="box" id="notes_box" style="z-index: 2">
+    <div class="notes_box section">
+      <div
+        class="display-flex flex-row justify-between align-center w-100"
+        style="
+          height: 37px;
+          font-size: 18px;
+          /* width: 166px; */
+          /* color: #6a6c83; */
+          user-select: none;
+          font-weight: 700;
+        "
+      >
+        <div class="fullScreenTitle ml-1">notes</div>
+        <span id="close_notes" class="material-symbols-rounded cursor-pointer">
+          home
+          </span>
+       
+        <!-- <span class="material-symbols-outlined" id="close_notes"> close </span> -->
+      </div>
+
+      <div
+        id="note-typing-container"
+        style="height: 100%"
+        class="note-typing-container mt-2"
+      >
+        <div
+          id="note-typing-description-screen"
+          class="note-typing-description"
+          contenteditable="true"
+          style="resize: none"
+        ></div>
+        <!-- Dropdown meetings list -->
+        <select id="meetings-list" class=""></select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Div to show settings items list -->
+  <div class="box" id="settings_box" style="z-index: 1">
+    <div class="settings_box section">
+      <div
+        class="fullScreenTitle display-flex flex-row justify-between align-center w-100 mb-2"
+        style="height: 24px"
+      >
+        <h1
+          class="ml-2"
+          style='
+            user-select: none;
+            font-weight: 700;
+            font-size: 18px;
+            font-family: "GELLIX-REGULAR", sans-serif;
+          '
+        >
+          settings
+        </h1>
+        <span class="material-symbols-rounded cursor-pointer" id="close_settings">
+          home
+        </span>
+
+        <!-- <img
+          src="../assets/home_black.svg"
+          id="close_settings"
+          style="
+            height: 18px !important;
+            width: 18px !important;
+            margin-right: 2px;
+            cursor: pointer;
+            user-select: none;
+          "
+        /> -->
+      </div>
+      <div id="section_vert_settings"></div>
+    </div>
+  </div>
+</div>
+
+<div class="footer_container mr-0 ml-1" style="gap:10px">
+
+  
+  <!-- <div class="display-flex flex-col justify-start align-start ml-0">
+    <div class="toggle_text" id="hide_extension">
+    <span class="material-symbols-outlined">
+      do_not_disturb_on
+      </span>
+    </div>
+  </div> -->
+
+
+
+
+  <div
+    class="w-30 display-flex flex-row justify-end align-center flex col"
+    style="gap: 1px; overflow:visible; margin-right:14px"
+  >
+
+  <div class="display-flex flex-row justify-center align-center">
+    <p class="toggle_text mr-2"id="refresh-data-feedback" >FEEDBACK</p>
+  </div>
+
+  <!-- <div class="display-flex flex-row justify-center align-center" id="hide_extension">
+    <p class="toggle_text mr-2" id="report-problem">HIDE</p>
+  </div> -->
+
+
+    <div id="hide_extension">
+      <p class="toggle_text_secondary" style="border-bottom: 0px solid;" >HIDE</p>
+      <span class="material-symbols-outlined" id="report-problem"> do_not_disturb_on </span>
+    </div>
+
+    <div id="sync_text">
+      <p class="toggle_text" style="border-bottom: 0px solid;">SYNC</p>
+      <span class="material-symbols-outlined" style="color:white !important" id="refresh-data"> refresh </span>
+    </div>
+    
+  </div>
+</div>
+
+<script type="text/javascript" src="../js/utils.js"></script>
+<script type="text/javascript" src="../js/momentjs.js"></script>
+<script type="text/javascript" src="../js/rte.js"></script>
+<script type="text/javascript" src="../js/notes.js"></script>
+<script type="text/javascript" src="../scripts/gsap.min.js"></script>

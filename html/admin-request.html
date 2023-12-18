@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Portd - Admin Request</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../../css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../../css/popup.css"
+    />
+  </head>
+
+  <body class="light-mode">
+    <div class="paper container">
+      <div class="header-container">
+        <div class="shortcut-key-container">
+          <span class="shortkey-suggestion"><b>Alt + Z</b> to toggle</span>
+        </div>
+        <div class="switcher theme-switch-container">
+          <label class="switch-label">
+            <input id="theme-swticher" type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <label class="label">Dark mode</label>
+        </div>
+      </div>
+      <div class="logo-container"><img class="main-logo main-logo-img" /></div>
+      <div class="card admin-permission-request-card">
+        <div class="card-body">
+          <h5 class="card-subtitle">Company Policies!</h5>
+          <p>
+            In some cases, you may require an admin approval from your
+            organization to use Portd. You can initiate a request by sending
+            them the following message.
+          </p>
+          <div class="admin-permission-request-note-wrapper">
+            <textarea
+              rows="3"
+              id="admin-permission-request-note"
+              class="admin-permission-request-note"
+            >
+Hello Admin, I am writing to request permission to use Portd with my work calendar. Portd is a productivity tool that can manage multiple calendars and facilitates joining meetings from one place with one-click. I believe it will help me and others manage meetings better. According to their privacy policy, they do not store the user's calendar events. Here is the link to their privacy policy - https://portd.io/privacy-policy and a 60-second video about their product - https://www.youtube.com/watch?v=vkr0BtTxMcU. Thank you.</textarea
+            >
+          </div>
+          <div class="admin-permission-request-buttons">
+            <button id="copy-admin-permission-request-note" class="btn-small">
+              Copy
+            </button>
+            <a href="login.html" class="paper-btn btn-small menu-btn"
+              >back</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../../js/utils.js"></script>
+    <script type="text/javascript" src="../../js/admin-request.js"></script>
+  </body>
+</html>
